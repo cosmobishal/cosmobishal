@@ -1,0 +1,27 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Constants
+speed_of_light = 3e8  # Speed of light in meters per second
+
+# Time values
+time = np.linspace(0, 1, 100)  # Adjust the time range as needed
+
+# Calculate velocities
+velocities = time * speed_of_light
+
+# Plot the velocity-time graph
+plt.figure(figsize=(8, 6))
+plt.plot(time, velocities, label="Velocity")
+plt.axhline(speed_of_light, color='red', linestyle='--', label="Speed of Light")
+plt.xlabel("Time (s)")
+plt.ylabel("Velocity (m/s)")
+plt.title("Velocity-Time Graph")
+plt.legend()
+plt.grid(True)
+
+# Save the graph to a file
+plt.savefig("velocity_time_graph.png")
+
+# Show the graph
+plt.show()
